@@ -6,7 +6,7 @@ const axios=require("axios")
 dotenv.config();  // Load environment variables from .env file
 
 const app = express();
-
+app.use(express.static("dist"))
 // Define CORS options
 const corsOptions = {
   origin: [
