@@ -10,10 +10,7 @@ const app = express();
 // Define CORS options
 const corsOptions = {
   origin: [
-    'http://localhost:1234',  // Development server
-    'http://localhost:8080',  // Another development server or local backend
-    'https://react-planet.vercel.app/',
-    "https://backend-zeta-brown-74.vercel.app/"  // Production or other environments
+   "*"
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Allowed HTTP methods
   allowedHeaders: [
@@ -36,7 +33,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Proxy endpoint
-app.use('/', (req, res) => {
+/* app.use('/', (req, res) => {
   const url = req.url.substring(1);  // Strip leading slash
   const fullUrl = url.startsWith('http') ? url : `https://${url}`;  // Ensure correct protocol
   
@@ -48,8 +45,10 @@ app.use('/', (req, res) => {
       res.status(500).json({ message: 'Proxy request failed', error: err.message });
     })
     .pipe(res);
-});
-
+}); */
+app.get("/",(req,res)=>{
+      res.send("Server is running on vercel")
+})
 // Start the server
 const PORT = process.env.PORT || 4000;  // Use port from environment or default to 8080
 
