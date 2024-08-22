@@ -10,7 +10,7 @@ const app = express();
 // Define CORS options
 const corsOptions = {
   origin: [
-   "*"
+   "*","http://localhost:1234"
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Allowed HTTP methods
   allowedHeaders: [
