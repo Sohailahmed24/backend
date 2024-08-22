@@ -12,7 +12,8 @@ const corsOptions = {
   origin: [
     'http://localhost:1234',  // Development server
     'http://localhost:8080',  // Another development server or local backend
-    'https://react-planet.vercel.app/'  // Production or other environments
+    'https://react-planet.vercel.app/',
+    "https://backend-zeta-brown-74.vercel.app/"  // Production or other environments
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Allowed HTTP methods
   allowedHeaders: [
