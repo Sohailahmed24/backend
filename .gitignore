@@ -1,0 +1,12 @@
+# Node and Bower Modules
+node_modules/               # Node.js dependencies
+bower_components/           # Bower dependencies (if used)
+# Build and Temporary Files
+dist/                       # Build outputs
+build/                      # Build outputs
+tmp/                        # Temporary files
+*.tmp                       # Temporary files with .tmp extension
+# Environment Configuration Files
+.env                        # Environment variables configuration file
+/node_modules
+/dist
